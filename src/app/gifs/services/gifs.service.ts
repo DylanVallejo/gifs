@@ -12,11 +12,31 @@ export class GifsService {
   }
 
 
-  public searchTag(tag:string):void {
+  private organizeHistory(tag:string){
 
-    this._tagsHistory.unshift(tag)
+    tag = tag.toLowerCase();
 
-    // console.log(this.tagsHistory)
+    // filtrando duplicados
+    if(this._tagsHistory.includes(tag)){
+      this._tagsHistory = this._tagsHistory.filter((oldTag)=> oldTag !== tag)
+    }
+
+    // ponemeos primero ne la lista la busqueda repetida
+    this._tagsHistory.unshift( tag );
+    // fijamos una cantidad de busquedas
+    this._tagsHistory= this.tagsHistory.splice(0,10);
+
+
+  }
+
+
+  public searchTag( tag:string ):void {
+
+    if(tag.length === 0) return;
+
+    this.organizeHistory(tag);
+
+    console.log(this.tagsHistory);
 
   }
 
