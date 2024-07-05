@@ -5,6 +5,9 @@ export class GifsService {
 
   private _tagsHistory: string [] = [];
 
+
+  private apiKey:string = '0HL5FAzflVcb6j5DAKxknSXwhkCpU45z';
+
   constructor() { }
 
   get tagsHistory(){
@@ -18,7 +21,7 @@ export class GifsService {
 
     // filtrando duplicados
     if(this._tagsHistory.includes(tag)){
-      this._tagsHistory = this._tagsHistory.filter((oldTag)=> oldTag !== tag)
+      this._tagsHistory = this._tagsHistory.filter( (oldTag) => oldTag !== tag )
     }
 
     // ponemeos primero ne la lista la busqueda repetida
@@ -30,13 +33,15 @@ export class GifsService {
   }
 
 
-  public searchTag( tag:string ):void {
+  async searchTag( tag:string ):Promise<void> {
 
     if(tag.length === 0) return;
 
     this.organizeHistory(tag);
 
-    console.log(this.tagsHistory);
+    const resp = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=0HL5FAzflVcb6j5DAKxknSXwhkCpU45z&q=dota&limit=5')
+    const data = resp.json();
+    console.log(data)
 
   }
 
