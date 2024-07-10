@@ -13,5 +13,6 @@ export class SidebarComponent {
   get tags(){
     return this.gifsService.tagsHistory;
   }
+  // todo al dar click hacer el llamdo de fetch en los bototnes
 
 }
