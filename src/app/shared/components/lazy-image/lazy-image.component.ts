@@ -1,4 +1,3 @@
-import { IfStmt } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -22,7 +21,9 @@ export class LazyImageComponent implements OnInit {
   }
 
   onLoad(){
-    this.hasLoaded = true;
+    setTimeout(() => {
+      this.hasLoaded = true;
+    }, 1000);
   }
 
 }
