@@ -1,27 +1,24 @@
 # GifsApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Gifs App creada para poner en practica las bases de angular como la creacion de componentes, modularizacion, servicios, interfaces, y solicitudes mediante HttpClient junto a cargas perezosas.
 
-## Development server
+## Servidor de desarrollo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ejecuta `ng serve` para un serviddor de desarrollo. Nvega a `http://localhost:4200/`. La aplicaion recargara automaticamente al realizar cambios.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tech Stack
 
-## Build
+**Client:** Angular, TypeScript, BootStrap
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Previews
 
-## Running unit tests
+![image](https://github.com/user-attachments/assets/e898b8f5-cdb1-440a-b509-7360b43cae97)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+![image](https://github.com/user-attachments/assets/0f03cfd6-76ed-42b3-afbe-5b7cea76ecac)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+  
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
